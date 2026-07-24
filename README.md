@@ -14,6 +14,3 @@ Here you will find various implementations of LangGraph concepts:
 - **Python**
 - **LangChain & LangGraph**
 - **LLMs (OpenAI / Anthropic / Local models)**
-
-## 🚀 Getting Started
-To run these programs locally, follow these steps:
