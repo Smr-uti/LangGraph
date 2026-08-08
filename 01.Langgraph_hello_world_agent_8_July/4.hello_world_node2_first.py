@@ -22,12 +22,14 @@ builder.add_edge(START,"node2")
 builder.add_edge("node2","node1") 
 builder.add_edge("node1",END)
 
+
 graph=builder.compile()
 
-result=graph.invoke({
-    "greeting":"Good Morning",
 
+result=graph.invoke({
+    "greeting":"Good Morning"
 })
+
 
 print(result)
 
