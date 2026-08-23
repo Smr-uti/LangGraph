@@ -1,7 +1,7 @@
 import requests
 from langgraph.graph import StateGraph, START, END, MessagesState
 
-weather_api_key = c869d5d26d002bf0eb3ed625aaef032e
+weather_api_key = "c869d5d26d002bf0eb3ed625aaef032e"
 
 # Define the node to fetch live weather data
 def live_weather_node(state):
@@ -39,7 +39,7 @@ app = builder.compile()
 
 # Simulate interaction with the weather API
 def simulate_interaction():
-    input_message = {"messages": [("human", "Tell me the weather in nashik")]}
+    input_message = {"messages": [("human", "Tell me the weather in Nashik")]}
     
     # Process the input and stream the result
     for result in app.stream(input_message, stream_mode="values"):
