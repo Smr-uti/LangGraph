@@ -1,8 +1,9 @@
 import os
 from langchain_groq import ChatGroq
-from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 from display_graph import display_graph
+from langchain.agents import create_agent
+
 
 # Define tools
 def add(a: int, b: int) -> int:
@@ -29,7 +30,7 @@ load_dotenv()
 
 llm=ChatGroq(model="openai/gpt-oss-20b")
 # Create the ReAct agent
-graph = create_react_agent(model=llm, tools=tools)
+graph = create_agent(model=llm, tools=tools)
 
 #Visualise the graph
 display_graph(graph,file_name= os.path.basename(__file__))
