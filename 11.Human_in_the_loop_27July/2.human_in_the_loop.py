@@ -78,7 +78,7 @@ for event in graph.stream(initial_input, thread, stream_mode="values"):
 user_approval = input("Do you approve the draft for publishing? (yes/no/modification): ")
 
 if user_approval.lower() == "yes":
-    # Proceed to publish content
+    # Proceed to publish content..
     for event in graph.stream(None, thread, stream_mode="values"):
         print(event)
 elif user_approval.lower() == "modification":
